@@ -1,0 +1,85 @@
+img {
+    width: 100px;
+    border-radius: 10px;
+  }
+  
+  .form-margin {
+    margin-bottom: 12px;
+  }
+  
+  .cart-item {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+  }
+  
+  .cart-item-details {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: left;
+    margin-left: 80px;
+  }
+  
+  .number-input {
+    width: 80px;
+    text-align: center;
+  }
+  
+  .cart-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 64px;
+  }
+  
+  .cart-panel {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  
+  .empty-cart-message {
+    display: flex;
+    justify-content: center;
+    margin-top: 64px;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+  }
+  .flex p{
+    display: inline;
+    margin-left: 5px;
+  }
+  .flex input{
+    display: inline;
+    margin-left: 5px;
+    width: 30px;
+    padding: 5px;
+    text-align: center;
+  }
+  .clearfix{
+    clear: both;
+  }
+
+  form input{
+    padding: 10px;
+    width: 100%;
+  }
+  form button{
+    background-color: #33B5E5;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: fit-content;
+  }
+  form button:disabled{
+    background-color: gray;
+  }
+  .total{
+    width: 1024px;
+    margin: auto;
+  }
