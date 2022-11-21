@@ -25,6 +25,9 @@ export class ProductItemComponent implements OnInit {
   getid(e: product) {
     this.service.getproductdetail(e);
   }
+  updatecount(e:number) {
+    this.count=e
+  }
   addtolist(product: product,count:number) {
     this.service.addtocard(product,count);
   }

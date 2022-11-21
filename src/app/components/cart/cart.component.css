@@ -79,6 +79,9 @@ img {
   form button:disabled{
     background-color: gray;
   }
+  form input[type=number]:hover{
+    outline: none;
+  }
   .total{
     width: 1024px;
     margin: auto;

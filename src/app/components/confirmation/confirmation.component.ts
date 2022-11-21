@@ -18,5 +18,7 @@ export class ConfirmationComponent implements OnInit {
   }
   deletall(){
     this.service.removall()
+    this.total=this.service.totalprice
+    this.name=this.service.name
   }
 }

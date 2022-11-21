@@ -38,12 +38,21 @@ export class CartComponent implements OnInit {
       this.count4 * this.price4 +
       this.count5 * this.price5;
     this.service.totalprice=this.total
+    console.log(this.total)
   }
   onSubmit() {
     this.service.name=this.name
   }
   on(name:string) {
     this.service.name=name
+    this.total =
+      this.count1 * this.price1 +
+      this.count2 * this.price2 +
+      this.count3 * this.price3 +
+      this.count4 * this.price4 +
+      this.count5 * this.price5;
+    this.service.totalprice=this.total
+    console.log(this.total)
     alert("submited")
   }
   delete(count:number,id:number){
