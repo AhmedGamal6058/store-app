@@ -1,0 +1,4 @@
+<div class="product-index">
+  <app-product-item *ngFor="let product of products" [product]="product" (count2)="count" ></app-product-item>
+</div>
+<router-outlet></router-outlet>

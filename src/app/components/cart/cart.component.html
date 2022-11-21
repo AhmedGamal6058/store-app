@@ -1,0 +1,92 @@
+<div class="cart-container">
+  <div class="cart-panel">
+    <div class="cart-item" *ngFor="let list of lists">
+      <img src="{{ list.url }}" alt="" />
+      <div class="cart-item-details">
+        <h3>{{ list.name }}</h3>
+        <p>${{ list.price }}</p>
+        <div class="flex">
+          <p>Amount:</p>
+          <input
+            type="number"
+            value="1"
+            name="value"
+            [(ngModel)]="count1"
+            *ngIf="list.id == 1"
+            (click)="delete(count1,1)"
+          />
+          <input
+            type="number"
+            value="1"
+            name="value"
+            [(ngModel)]="count2"
+            *ngIf="list.id == 2"
+            (click)="delete(count2,2)"
+          />
+          <input
+            type="number"
+            value="1"
+            name="value"
+            [(ngModel)]="count3"
+            *ngIf="list.id == 3"
+            (click)="delete(count3,3)"
+          />
+          <input
+            type="number"
+            value="1"
+            name="value"
+            [(ngModel)]="count4"
+            *ngIf="list.id == 4"
+            (click)="delete(count4,4)"
+          />
+          <input
+            type="number"
+            value="1"
+            name="value"
+            [(ngModel)]="count5"
+            *ngIf="list.id == 5"
+            (click)="delete(count5,5)"
+          />
+
+          <div class="clearfix"></div>
+        </div>
+      </div>
+    </div>
+    <h2>
+      total:{{ count1 * price1 + count2 * price2 + count3 *price3 + count4 *price4 + count5 *price5 }}
+    </h2>
+  </div>
+  <form class="form-margin" #form="ngForm" (ngSubmit)="onSubmit()">
+    <h2>full name</h2>
+    <input
+      type="text"
+      name="username"
+      placeholder="(minimum 3 characters)"
+      required
+      minlength="3"
+      maxlength="15"
+      [(ngModel)]="name"
+    />
+    <h2>address</h2>
+    <input
+      type="text"
+      name="address"
+      placeholder="(minimum 6 characters)"
+      required
+      minlength="6"
+      maxlength="20"
+      [(ngModel)]="address"
+    />
+    <h2>credit card number</h2>
+    <input
+      type="text"
+      name="credit"
+      placeholder="(16-digit number)"
+      required
+      minlength="16"
+      [(ngModel)]="credit"
+    />
+    <p>we'll never share payment details whit anyone</p>
+    <button type="submit" [disabled]="form.invalid" routerLink="/confirmation" (click)="on(name)">submit</button>
+  </form>
+</div>

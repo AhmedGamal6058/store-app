@@ -1,0 +1,40 @@
+img {
+  border-radius: 10px;
+  width: 250px;
+}
+
+.select-input {
+  width: 108px;
+  margin-bottom: 8px;
+}
+
+.detail-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  font-size: 16px;
+}
+
+.detail-item {
+  margin-left: 128px;
+  margin-right: 128px;
+}
+
+.back-link {
+  margin: 8px 0;
+  color: #33b5e5;
+  text-decoration: none;
+}
+a.btn {
+  width: fit-content;
+  text-decoration: none;
+  display: block;
+  background-color: #33b5e5;
+  border: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
