@@ -63,8 +63,7 @@
       name="username"
       placeholder="(minimum 3 characters)"
       required
-      minlength="3"
-      maxlength="15"
+      minlength="7"
       [(ngModel)]="name"
     />
     <h2>address</h2>
@@ -74,19 +73,19 @@
       placeholder="(minimum 6 characters)"
       required
       minlength="6"
-      maxlength="20"
       [(ngModel)]="address"
     />
     <h2>credit card number</h2>
     <input
-      type="number"
+      type="text"
       name="credit"
       placeholder="(16-digit number)"
       required
       minlength="16"
       [(ngModel)]="credit"
+      (ngModelChange)="checknumber($event)"
     />
     <p>we'll never share payment details whit anyone</p>
-    <button type="submit" [disabled]="form.invalid" routerLink="/confirmation" (click)="on(name)">submit</button>
+    <button type="submit" id="btn" [disabled]="form.invalid" routerLink="/confirmation" (click)="on(name)">submit</button>
   </form>
 </div>

@@ -12,6 +12,7 @@ export class CartComponent implements OnInit {
   address: string = '';
   credit: string = '';
   totalcard: number = 0;
+  ascii: number = 0;
   total: number = 0;
   count1: number = this.service.count1;
   count2: number = this.service.count2;
@@ -37,28 +38,34 @@ export class CartComponent implements OnInit {
       this.count3 * this.price3 +
       this.count4 * this.price4 +
       this.count5 * this.price5;
-    this.service.totalprice=this.total
-    console.log(this.total)
+    this.service.totalprice = this.total;
+    console.log(this.total);
   }
   onSubmit() {
-    this.service.name=this.name
+    this.service.name = this.name;
   }
-  on(name:string) {
-    this.service.name=name
+  on(name: string) {
+    this.service.name = name;
     this.total =
       this.count1 * this.price1 +
       this.count2 * this.price2 +
       this.count3 * this.price3 +
       this.count4 * this.price4 +
       this.count5 * this.price5;
-    this.service.totalprice=this.total
-    console.log(this.total)
-    alert("submited")
+    this.service.totalprice = this.total;
+    console.log(this.total);
+    alert('submited');
   }
-  delete(count:number,id:number){
-    if(count==0){
-      this.service.removecart(id)
-      alert("deleted")
+  delete(count: number, id: number) {
+    if (count == 0) {
+      this.service.removecart(id);
+      alert('deleted');
+    }
+  }
+  checknumber(num: string) {
+    if(num[num.length-1].charCodeAt(0) < 48 || num[num.length-1].charCodeAt(0) > 58){
+      this.credit=" "
+      alert("number only")
     }
   }
 }
