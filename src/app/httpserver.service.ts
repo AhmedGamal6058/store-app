@@ -20,7 +20,6 @@ export class HttpserverService {
   count4: number = 0;
   count5: number = 0;
   count: number = 1;
-  totalprice:number=0
   name:string=""
   productlist$ = new BehaviorSubject<product[]>(this.productlist);
   cardlist$ = new BehaviorSubject<product[]>(this.cardlist);
@@ -90,7 +89,11 @@ export class HttpserverService {
     this.three= true;
     this.four= true;
     this.five= true;
-    this.totalprice=0
+    count1: 0;
+    count2:0;
+    count3:0;
+    count4:0;
+    count5:0;
     this.name=""
   }
 }

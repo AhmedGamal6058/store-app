@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpserverService } from 'src/app/httpserver.service';
 import { product } from './../model/item';
+import { CardServicesService } from './../../card-services.service';
 
 @Component({
   selector: 'app-cart',
@@ -25,7 +26,7 @@ export class CartComponent implements OnInit {
   price4: number = this.service.productlist[3].price;
   price5: number = this.service.productlist[4].price;
   lists: product[] = [];
-  constructor(private service: HttpserverService) {
+  constructor(private service: HttpserverService,private CardServices:CardServicesService) {
     this.service.getdata();
     this.service.cardlist$.subscribe((item) => {
       this.lists = item;
@@ -38,7 +39,7 @@ export class CartComponent implements OnInit {
       this.count3 * this.price3 +
       this.count4 * this.price4 +
       this.count5 * this.price5;
-    this.service.totalprice = this.total;
+    this.CardServices.totalprice = this.total;
     console.log(this.total);
   }
   onSubmit() {
@@ -52,7 +53,7 @@ export class CartComponent implements OnInit {
       this.count3 * this.price3 +
       this.count4 * this.price4 +
       this.count5 * this.price5;
-    this.service.totalprice = this.total;
+    this.CardServices.totalprice = this.total;
     console.log(this.total);
     alert('submited');
   }
